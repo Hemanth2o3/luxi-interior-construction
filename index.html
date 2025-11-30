@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXI - Interior & Construction | Chennai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f0f0;
+            background: #0f1419;
+            line-height: 1.6;
+        }
+        nav {
+            background: rgba(15, 20, 25, 0.95);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #10b981;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #10b981;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #10b981;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0f1419 0%, #1a2332 100%);
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #10b981;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: #d0d0d0;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        .btn-secondary {
+            background: #d4af37;
+            color: #0f1419;
+        }
+        section {
+            padding: 5rem 2rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #10b981;
+            margin-bottom: 3rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: #1a2332;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+        }
+        .service-card h3 {
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #1a2332;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .project-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .project-info {
+            padding: 1.5rem;
+            border-top: 3px solid #d4af37;
+        }
+        .project-info h3 {
+            color: #10b981;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .testimonial-card {
+            background: #1a2332;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #d4af37;
+        }
+        .contact {
+            background: #0f1419;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.9rem;
+            background: #1a2332;
+            border: 1px solid #10b981;
+            border-radius: 5px;
+            color: #f0f0f0;
+            margin-bottom: 1rem;
+        }
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        footer {
+            background: #0a0d11;
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #10b981;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">LUXI</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>LUXI Interior & Construction</h1>
+        <p>Premium Design | Expert Craftsmanship | Luxury Spaces</p>
+        <p>Transforming spaces across Chennai & Tamil Nadu</p>
+        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView()">Get Free Consultation</button>
+        <button class="btn btn-secondary" onclick="alert('WhatsApp: +91 XXXXX XXXXX')">WhatsApp Us</button>
+    </section>
+
+    <section class="services" id="services" style="background: #1a2332;">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Residential Interiors</h3>
+                <p>Luxury home designs that reflect your style and personality.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Spaces</h3>
+                <p>Professional offices and retail spaces designed for success.</p>
+            </div>
+            <div class="service-card">
+                <h3>Full Renovations</h3>
+                <p>Complete home and office renovations with expert execution.</p>
+            </div>
+            <div class="service-card">
+                <h3>3D Visualizations</h3>
+                <p>See your design before construction begins.</p>
+            </div>
+            <div class="service-card">
+                <h3>Project Management</h3>
+                <p>End-to-end project oversight and quality assurance.</p>
+            </div>
+            <div class="service-card">
+                <h3>Consultation</h3>
+                <p>Expert advice for your interior and construction needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects" style="background: #0f1419;">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">Luxury Apartment<br>Chennai</div>
+                <div class="project-info">
+                    <h3>Premium 3BHK</h3>
+                    <p style="color: #d4af37;">Residential</p>
+                    <p style="color: #808080;">Chennai</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Modern Office<br>T. Nagar</div>
+                <div class="project-info">
+                    <h3>Corporate Office</h3>
+                    <p style="color: #d4af37;">Commercial</p>
+                    <p style="color: #808080;">T. Nagar</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Villa Exterior<br>Suburb</div>
+                <div class="project-info">
+                    <h3>Modern Villa</h3>
+                    <p style="color: #d4af37;">Residential</p>
+                    <p style="color: #808080;">Suburb</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Retail Space<br>Mall</div>
+                <div class="project-info">
+                    <h3>Retail Store</h3>
+                    <p style="color: #d4af37;">Commercial</p>
+                    <p style="color: #808080;">Mall</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Kitchen Remodel<br>Home</div>
+                <div class="project-info">
+                    <h3>Kitchen Renovation</h3>
+                    <p style="color: #d4af37;">Renovation</p>
+                    <p style="color: #808080;">Residential</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">Bedroom Design<br>Luxury</div>
+                <div class="project-info">
+                    <h3>Master Bedroom</h3>
+                    <p style="color: #d4af37;">Residential</p>
+                    <p style="color: #808080;">Premium</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" style="background: #1a2332;">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div style="color: #d4af37; margin-bottom: 1rem;">★★★★★</div>
+                <p style="margin-bottom: 1rem;">"LUXI transformed our home into a luxurious sanctuary. Highly recommended!"</p>
+                <p style="color: #10b981; font-weight: 600;">- Rajesh Kumar</p>
+            </div>
+            <div class="testimonial-card">
+                <div style="color: #d4af37; margin-bottom: 1rem;">★★★★★</div>
+                <p style="margin-bottom: 1rem;">"Professional team, excellent execution, and beautiful results."</p>
+                <p style="color: #10b981; font-weight: 600;">- Priya Singh</p>
+            </div>
+            <div class="testimonial-card">
+                <div style="color: #d4af37; margin-bottom: 1rem;">★★★★★</div>
+                <p style="margin-bottom: 1rem;">"Best interior design experience. Every detail was perfect."</p>
+                <p style="color: #10b981; font-weight: 600;">- Vikram Patel</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <input type="tel" placeholder="Your Phone" />
+            <textarea placeholder="Your Message" rows="5"></textarea>
+            <button class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <button class="whatsapp-btn" style="width: 100%; margin-top: 1rem;" onclick="alert('WhatsApp: +91 XXXXX XXXXX')">WhatsApp Us Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LUXI Interior & Construction. All rights reserved.</p>
+        <p>Chennai & Tamil Nadu | Luxury Interiors & Construction</p>
+    </footer>
+</body>
+</html>
